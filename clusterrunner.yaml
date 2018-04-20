@@ -1,5 +1,5 @@
 Simple:
-    max_executors: 10
+    max_executors: 15
 
     setup_build:
         - echo "Performing setup"
@@ -8,11 +8,11 @@ Simple:
         - echo "Performing teardown"
 
     commands:
-        - sleep 1
+        - sleep $(($TOKEN % 10))
         - echo $TOKEN
 
     atomizers:
-        - TOKEN: seq 1 10
+        - TOKEN: seq 1 10000
 
 
 PHPUnit:
