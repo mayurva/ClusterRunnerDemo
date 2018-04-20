@@ -1,5 +1,5 @@
 Simple:
-    max_executors: 15
+    max_executors: 25
 
     setup_build:
         - echo "Performing setup"
